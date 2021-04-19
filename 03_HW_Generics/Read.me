@@ -1,0 +1,31 @@
+package model:
+
+Создать пустые классы Cat и Dog с дефолтным конструктором для них
+
+Создать дженерик класс GenericModel c полем private E elem;
+
+и конструктором
+
+public GenericModel(E elem) {
+ this.elem = elem;
+}
+
+В конструкторе GenericModel реализовать проверку: если GenericModel инициализируется классом Cat
+вывести в консоль Initialized by class Cat, если классом Dog - Initialized by class Dog,
+если любым другим классом - Initialized by unknown class
+Также реализовать геттеры и сеттеры
+
+package controller:
+
+Создать класс GenericApp
+В main создать объекты классов Cat и Dog
+
+При помощи них создать 2 объекта
+dogGenericModel, в котором E это Dog
+catGenericModel, в котором E это Cat
+также создать
+unknownGenericModel в котором E это любой класс-оболочка по вашему желанию.
+
+Попробовать создать объект dogGenericModel2, в котором E это Dog, при помощи объекта класса Cat.
+Попробовать создать новый объект cat2 и присвоить ему значение геттера из dogGenericModel;
+Попробовать использование кастинга в обоих случаях.

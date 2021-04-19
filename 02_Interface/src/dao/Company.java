@@ -60,12 +60,20 @@ public class Company implements ICompany {
 
     @Override
     public double avgSalary() {
-        return totalSalary() / size;
+        if (size > 0) {
+            return totalSalary() / size;
+        } else {
+            return 0;
+        }
+
     }
 
     @Override
     public double totalSales() {
         double result = 0.0;
+        if (size <= 0) {
+            return 0;
+        }
         for (int i = 0; i < size; i++) {
             if (employees[i] instanceof BonusWorker) {
                 result += ((BonusWorker) employees[i]).getSales();
